@@ -1,6 +1,6 @@
 
 import cv2 as cv 
-from util import get_limits
+from project.color_dect_util import get_limits
 
 yellow = [0,255,255]
 
