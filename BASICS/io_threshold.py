@@ -4,7 +4,7 @@
 import cv2 as cv 
 import os
 
-img = cv.imread(os.path.join('.','Photo','bear.jpg'))
+img = cv.imread(os.path.join('.','Photo','bears.jpg'))
 
 
 img_gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
