@@ -21,11 +21,13 @@ while True:
 
     #DETECTION OF FACES
 
-    faces = face_dect.detectMultiScale(cap_gray,1.1,4)
-    '''1.1 means the image is reduced by 10% at each scale thus on reducing it it gives more accurate and fine results
+    faces = face_dect.detectMultiScale(cap_gray, scaleFactor=1.05, minNeighbors=3, minSize=(60, 60))
+
+    '''1.05 means the image is reduced at each scale thus on reducing it it gives more accurate and fine results
     but also increase computational time 
     3-6 is good if 3  more face detect but some amy be wrong 
-    5 or 6 fewer bot more confident or precise detections''' 
+    5 or 6 fewer bot more confident or precise detections
+    minSize=(60, 60): Forces the detector to only look for regions at least 60x60 pixels''' 
 
     #BLUR EACH FACE
     for (x,y,w,h) in faces:
